@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Film Trailer Editor Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
+
+    header h1 { font-weight: 800; letter-spacing: 2px; }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #ccc;
+      transition: 0.3s;
+    }
+
+    nav a:hover { color: #fff; }
+
+    section { padding: 120px 10%; }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: radial-gradient(circle at center, #111 0%, #000 100%);
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero span {
+      color: #ff3c3c;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      border: 1px solid #fff;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #ff3c3c;
+      border-color: #ff3c3c;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #111;
+      padding: 20px;
+      border-radius: 15px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover { transform: translateY(-10px); }
+
+    .card iframe {
+      width: 100%;
+      height: 200px;
+      border-radius: 10px;
+    }
+
+    .about {
+      max-width: 700px;
+      margin: auto;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      margin: auto;
+    }
+
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #000;
+      color: #777;
+    }
+    
+
+
+    
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>EDITOR</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#projects">Work</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div>
+    <h2>Cinematic <span>Trailer Editor</span></h2>
+    <p>Crafting emotion, tension, and story through cutting-edge edits.</p>
+    <a href="#projects" class="btn">View Work</a>
+  </div>
+</section>
+
+
+<section id="projects">
+  <h2 style="margin-bottom:40px;">Selected Work</h2>
+
+  <div class="projects">
+
+    <!-- Project 1 -->
+    <div class="card">
+      <div class="video-wrapper">
+        <iframe
+          src="https://player.vimeo.com/video/1091691332"
+          title="Horror Teaser Trailer of Hansel & Gretel"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <h3>Horror Teaser Trailer of Hansel & Gretel</h3>
+      <p>Fast-paced cinematic cut.</p>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="card">
+      <div class="video-wrapper">
+        <iframe
+          src="https://player.vimeo.com/video/1190097528"
+          title="The Labrynth Below Trailer"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <h3>The Labrynth Below Trailer</h3>
+      <p>Fast-paced cinematic cut.</p>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="card">
+      <div class="video-wrapper">
+        <iframe
+          src="https://player.vimeo.com/video/1190102512"
+          title="Pixel Quest Knowlegde vs Diabeties"
+          allow="autoplay; fullscreen; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <h3>Pixel Quest Knowledge Vs Diabeties</h3>
+      <p>Awareness Game Trailer.</p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+#projects {
+  padding: 80px 8%;
+  background: #0f0f0f;
+  color: white;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #181818;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.card h3 {
+  padding: 20px 20px 10px;
+  font-size: 1.3rem;
+}
+
+.card p {
+  padding: 0 20px 25px;
+  color: #b5b5b5;
+  line-height: 1.5;
+}
+</style>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+
+
+<section id="about">
+    <div 
+      class="about" 
+      style="
+        max-width:700px;
+        margin:auto;
+        text-align:center;
+        line-height:1.8;
+        background:rgba(20,20,20,0.9);
+        border:1px solid rgba(255,255,255,0.08);
+        padding:50px;
+        border-radius:24px;
+        box-shadow:0 10px 40px rgba(0,0,0,0.5);
+      "
+    >
+      <h2>About Me:</h2>
+  
+      <p>
+        I'm a film trailer editor specializing in high-impact storytelling. 
+        I focus on rhythm, pacing, and emotional engagement to turn raw footage 
+        into unforgettable cinematic experiences.
+      </p>
+    </div>
+  </section>
+  
+  <section id="contact">
+    <div 
+      class="about" 
+      style="
+        max-width:700px;
+        margin:auto;
+        text-align:center;
+        line-height:1.8;
+        background:rgba(20,20,20,0.9);
+        border:1px solid rgba(255,255,255,0.08);
+        padding:50px;
+        border-radius:24px;
+        box-shadow:0 10px 40px rgba(0,0,0,0.5);
+      "
+    >
+      <h2>Contact:</h2>
+  
+      <p><strong>Name:</strong> Amrit Chauhan</p>
+  
+      <p><strong>Email:</strong> am71tc@email.com</p>
+  
+      <p><strong>Phone:</strong> +61 431 727 642</p>
+  
+      <br><br>
+  
+      <p>
+        Feel free to reach out for collaborations, trailer editing projects, 
+        or creative partnerships. Let’s create something cinematic together.
+      </p>
+  
+    </div>
+  </section>
+
+  
+<footer>
+  <p>© 2026 Amrit Chauhan, Film Trailer Editor Portfolio</p>
+</footer>
+
+<script>
+  // Simple scroll animation
+  const cards = document.querySelectorAll('.card');
+
+  window.addEventListener('scroll', () => {
+    cards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      if(rect.top < window.innerHeight - 50) {
+        card.style.opacity = 1;
+        card.style.transform = 'translateY(0)';
+      }
+    });
+  });
