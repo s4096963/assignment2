@@ -33,9 +33,7 @@
       transition: 0.3s;
     }
     nav a:hover { color: #fff; }
-
     section { padding: 120px 10%; }
-
     .hero {
       height: 100vh;
       display: flex;
@@ -49,7 +47,7 @@
       margin-bottom: 20px;
     }
     .hero span {
-      color: #ff3c3c;
+      color: #3169e3;
     }
     .btn {
       display: inline-block;
@@ -61,8 +59,8 @@
       transition: 0.3s;
     }
     .btn:hover {
-      background: #ff3c3c;
-      border-color: #ff3c3c;
+      background: #3d59e2;
+      border-color: #ffffff;
     }
     .projects {
       display: grid;
@@ -76,6 +74,7 @@
       transition: transform 0.3s;
     }
     .card:hover { transform: translateY(-10px); }
+
     .card iframe {
       width: 100%;
       height: 200px;
@@ -98,13 +97,12 @@
       padding: 30px;
       background: #000;
       color: #777;
-    }    
+    }
   </style>
 </head>
 <body>
-
 <header>
-  <h1>EDITOR</h1>
+  <h1>Amrit Motion Studio</h1>
   <nav>
     <a href="#home">Home</a>
     <a href="#projects">Work</a>
@@ -120,7 +118,7 @@
   </div>
 </section>
 <section id="projects">
-  <h2 style="margin-bottom:40px;">Selected Work</h2>
+  <h2 style="margin-bottom:40px;">Featured Project's </h2>
   <div class="projects">
     <!-- Project 1 -->
     <div class="card">
@@ -132,9 +130,8 @@
           allowfullscreen>
         </iframe>
       </div>
-
       <h3>Horror Teaser Trailer of Hansel & Gretel</h3>
-      <p>Fast-paced cinematic cut.</p>
+      <p>Fast-paced cinematic cut. Self created AI composition.</p>
     </div>
     <!-- Project 2 -->
     <div class="card">
@@ -147,7 +144,7 @@
         </iframe>
       </div>
       <h3>The Labrynth Below Trailer</h3>
-      <p>Fast-paced cinematic cut.</p>
+      <p>Fast-paced cinematic cut. Self created AI composition.</p>
     </div>
     <!-- Project 3 -->
     <div class="card">
@@ -160,7 +157,7 @@
         </iframe>
       </div>
       <h3>Pixel Quest Knowledge Vs Diabeties</h3>
-      <p>Awareness Game Trailer.</p>
+      <p>Trailer for self created educational game.</p>
     </div>
   </div>
 </section>
@@ -270,7 +267,6 @@
 <script>
   // Simple scroll animation
   const cards = document.querySelectorAll('.card');
-
   window.addEventListener('scroll', () => {
     cards.forEach(card => {
       const rect = card.getBoundingClientRect();
